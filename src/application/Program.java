@@ -14,10 +14,16 @@ public class Program {
 		
 		File path = new File(strPath);
 		
-		File[] folders = path.listFiles(File::isDirectory);/*Create a vector of files */
+		File[] folders = path.listFiles(File::isDirectory);/*Create a vector of folders */
 		System.out.println("FOLDERS: ");           /*Sintaxe ReferenceOfMethods -::isDirectory List  only who is directory or folder */
 		for (File folder : folders) {
 			System.out.println(folder);
+		}
+		
+		File [] files = path.listFiles(File::isFile);/*Create a vector of files */
+		System.out.println("FILES: ");                /*Sintaxe ReferenceOfMethods -::isDirectory List only who is files */
+		for (File file : files) {
+			System.out.println(file);
 		}
 		
 		sc.close();
