@@ -26,6 +26,9 @@ public class Program {
 			System.out.println(file);
 		}
 		
+		boolean success = new File(strPath + "\\subdir").mkdir(); /*Created a subfolder*/
+		System.out.println("Directory created successfully: " + success); 
+		
 		sc.close();
 
 	}
